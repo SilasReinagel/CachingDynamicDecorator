@@ -1,0 +1,6 @@
+C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator\bin\Debug\CachingDynamicDecorator.dll
+C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator\bin\Debug\CachingDynamicDecorator.pdb
+C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator\bin\Debug\Castle.Core.dll
+C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator\obj\Debug\CachingDynamicDecorator.csprojResolveAssemblyReference.cache
+C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator\obj\Debug\CachingDynamicDecorator.dll
+C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator\obj\Debug\CachingDynamicDecorator.pdb
