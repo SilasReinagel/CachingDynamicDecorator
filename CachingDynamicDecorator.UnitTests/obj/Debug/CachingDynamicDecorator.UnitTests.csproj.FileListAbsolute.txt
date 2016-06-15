@@ -1,8 +1,0 @@
-C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator.UnitTests\obj\Debug\CachingDynamicDecorator.UnitTests.csprojResolveAssemblyReference.cache
-C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator.UnitTests\bin\Debug\CachingDynamicDecorator.UnitTests.dll
-C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator.UnitTests\bin\Debug\CachingDynamicDecorator.UnitTests.pdb
-C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator.UnitTests\bin\Debug\CachingDynamicDecorator.dll
-C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator.UnitTests\bin\Debug\Castle.Core.dll
-C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator.UnitTests\bin\Debug\CachingDynamicDecorator.pdb
-C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator.UnitTests\obj\Debug\CachingDynamicDecorator.UnitTests.dll
-C:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\CachingDynamicDecorator.UnitTests\obj\Debug\CachingDynamicDecorator.UnitTests.pdb

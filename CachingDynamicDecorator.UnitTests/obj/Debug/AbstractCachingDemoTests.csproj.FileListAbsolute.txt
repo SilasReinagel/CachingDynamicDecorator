@@ -1,8 +1,0 @@
-c:\users\sreinagel\documents\visual studio 2013\Projects\AbstractCachingDemo\AbstractCachingDemoTests\bin\Debug\AbstractCachingDemoTests.dll
-c:\users\sreinagel\documents\visual studio 2013\Projects\AbstractCachingDemo\AbstractCachingDemoTests\bin\Debug\AbstractCachingDemoTests.pdb
-c:\users\sreinagel\documents\visual studio 2013\Projects\AbstractCachingDemo\AbstractCachingDemoTests\obj\Debug\AbstractCachingDemoTests.csprojResolveAssemblyReference.cache
-c:\users\sreinagel\documents\visual studio 2013\Projects\AbstractCachingDemo\AbstractCachingDemoTests\obj\Debug\AbstractCachingDemoTests.dll
-c:\users\sreinagel\documents\visual studio 2013\Projects\AbstractCachingDemo\AbstractCachingDemoTests\obj\Debug\AbstractCachingDemoTests.pdb
-c:\users\sreinagel\documents\visual studio 2013\Projects\AbstractCachingDemo\AbstractCachingDemoTests\bin\Debug\Castle.Core.dll
-c:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\AbstractCachingDemoTests\bin\Debug\Caching.dll
-c:\Users\Sreinagel\Documents\Visual Studio 2013\Projects\AbstractCachingDemo\AbstractCachingDemoTests\bin\Debug\Caching.pdb

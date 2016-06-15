@@ -52,15 +52,15 @@
   <ItemGroup>
     <Compile Include="Assertions\ExceptionAssert.cs" />
     <Compile Include="Infrastructure\MethodInvocationDetailsTests.cs" />
-    <Compile Include="TestObjects\FakeAsyncProvider.cs" />
-    <Compile Include="TestObjects\FakeMultipleParameterProvider.cs" />
-    <Compile Include="TestObjects\FakeReferenceObject.cs" />
-    <Compile Include="TestObjects\FakeReferenceObjectProvider.cs" />
-    <Compile Include="TestObjects\FakeSimpleProvider.cs" />
-    <Compile Include="TestObjects\IAsyncProvider.cs" />
-    <Compile Include="TestObjects\IMultipleParameterProvider.cs" />
-    <Compile Include="TestObjects\IReferenceObjectProvider.cs" />
-    <Compile Include="TestObjects\ISimpleProvider.cs" />
+    <Compile Include="TestDoubles\FakeAsyncProvider.cs" />
+    <Compile Include="TestDoubles\FakeMultipleParameterProvider.cs" />
+    <Compile Include="TestDoubles\FakeReferenceObject.cs" />
+    <Compile Include="TestDoubles\FakeReferenceObjectProvider.cs" />
+    <Compile Include="TestDoubles\FakeSimpleProvider.cs" />
+    <Compile Include="TestDoubles\IAsyncProvider.cs" />
+    <Compile Include="TestDoubles\IMultipleParameterProvider.cs" />
+    <Compile Include="TestDoubles\IReferenceObjectProvider.cs" />
+    <Compile Include="TestDoubles\ISimpleProvider.cs" />
     <Compile Include="DefaultCachingDecoratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
