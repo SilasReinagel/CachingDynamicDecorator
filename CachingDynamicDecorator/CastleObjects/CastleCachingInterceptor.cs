@@ -4,7 +4,7 @@ using Castle.DynamicProxy;
 
 namespace CachingDynamicDecorator.CastleObjects
 {
-    public class CastleCachingInterceptor : CastleAsyncInterceptor
+    public sealed class CastleCachingInterceptor : CastleAsyncInterceptor
     {
         private readonly CachedInvocationResponseCollection _cache;
 

@@ -3,10 +3,10 @@ using System.Reflection;
 
 namespace CachingDynamicDecorator.Infrastructure
 {
-    public class MethodIdentifier
+    public sealed class MethodIdentifier
     {
-        public MethodInfo MethodInfo { get; private set; }
-        public object[] Args { get; private set; }
+        private MethodInfo MethodInfo { get; }
+        private object[] Args { get; }
 
         public MethodIdentifier(MethodInfo methodInfo, object[] args)
         {

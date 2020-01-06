@@ -2,7 +2,7 @@
 
 namespace CachingDynamicDecorator.Infrastructure
 {
-    public class CachedItem<T>
+    public sealed class CachedItem<T>
     {
         private readonly T _item; 
         private readonly DateTime _expirationTime;
@@ -13,7 +13,7 @@ namespace CachingDynamicDecorator.Infrastructure
             _expirationTime = DateTime.Now.Add(cacheDuration);
         }
 
-        public bool IsExpired { get { return DateTime.Now > _expirationTime; } }
+        public bool IsExpired => DateTime.Now > _expirationTime;
 
         public T Item
         {

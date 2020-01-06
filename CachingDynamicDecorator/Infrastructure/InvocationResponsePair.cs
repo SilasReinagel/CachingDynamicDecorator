@@ -1,9 +1,9 @@
 ﻿namespace CachingDynamicDecorator.Infrastructure
 {
-    public class InvocationResponsePair
+    public sealed class InvocationResponsePair
     {
-        public MethodIdentifier MethodId { get; private set; }
-        public object Response { get; private set; }
+        public MethodIdentifier MethodId { get; }
+        public object Response { get; }
 
         public InvocationResponsePair(MethodIdentifier methodId, object response)
         {

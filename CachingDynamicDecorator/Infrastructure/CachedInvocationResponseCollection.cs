@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace CachingDynamicDecorator.Infrastructure
 {
-    public class CachedInvocationResponseCollection
+    public sealed class CachedInvocationResponseCollection
     {
         private List<CachedItem<InvocationResponsePair>> _cachedItems = new List<CachedItem<InvocationResponsePair>>();
         private readonly TimeSpan _itemCacheDuration;
