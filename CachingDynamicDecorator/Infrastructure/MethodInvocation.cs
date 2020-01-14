@@ -1,14 +1,15 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Reflection;
 
 namespace CachingDynamicDecorator.Infrastructure
 {
-    public sealed class MethodIdentifier
+    public sealed class MethodInvocation : IComparable
     {
-        private MethodInfo MethodInfo { get; }
-        private object[] Args { get; }
+        public MethodInfo MethodInfo { get; }
+        public object[] Args { get; }
 
-        public MethodIdentifier(MethodInfo methodInfo, object[] args)
+        public MethodInvocation(MethodInfo methodInfo, object[] args)
         {
             MethodInfo = methodInfo;
             Args = args;
@@ -16,15 +17,14 @@ namespace CachingDynamicDecorator.Infrastructure
 
         public override bool Equals(object obj)
         {
-            return obj is MethodIdentifier 
-                && AreMethodEquals(MethodInfo, ((MethodIdentifier)obj).MethodInfo) 
-                && ((MethodIdentifier)obj).Args.SequenceEqual(Args);
+            return obj is MethodInvocation identifier 
+                && AreMethodEquals(MethodInfo, identifier.MethodInfo) 
+                && identifier.Args.SequenceEqual(Args);
         }
 
-        public override int GetHashCode()
-        {
-            return new { MethodInfo, Args }.GetHashCode();
-        }
+        public override int GetHashCode() => ToString().GetHashCode();
+        public override string ToString() => $"{MethodInfo.DeclaringType?.Name}{MethodInfo.Name}{string.Join("|", Args.Select(a => a.GetHashCode()))}";
+        public int CompareTo(object obj) => string.Compare(ToString(), obj.ToString(), StringComparison.InvariantCultureIgnoreCase);
 
         private static bool AreMethodEquals(MethodInfo left, MethodInfo right)
         {

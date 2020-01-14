@@ -12,10 +12,10 @@ namespace CachingDynamicDecorator.UnitTests.Infrastructure
         [TestMethod, TestCategory("Unit Test")]
         public void MethodInvocationDetails_DifferentMethodInputTypes_AreEqualIsFalse()
         {
-            var detail1 = new MethodIdentifier(
+            var detail1 = new MethodInvocation(
                 GetMethodInfo("SampleMethod", new [] { typeof(bool) }), 
                 new object[] { true });
-            var detail2 = new MethodIdentifier(
+            var detail2 = new MethodInvocation(
                 GetMethodInfo("SampleMethod", new [] { typeof(string) }), 
                 new object[] { "input" });
 
@@ -25,10 +25,10 @@ namespace CachingDynamicDecorator.UnitTests.Infrastructure
         [TestMethod, TestCategory("Unit Test")]
         public void MethodInvocationDetails_DifferentMethodNames_AreEqualIsFalse()
         {
-            var detail1 = new MethodIdentifier(
+            var detail1 = new MethodInvocation(
                 GetMethodInfo("SampleMethod", new[] { typeof(string) }),
                 new object[] { "input" });
-            var detail2 = new MethodIdentifier(
+            var detail2 = new MethodInvocation(
                 GetMethodInfo("DifferentMethod", new[] { typeof(string) }),
                 new object[] { "input" });
 
@@ -38,10 +38,10 @@ namespace CachingDynamicDecorator.UnitTests.Infrastructure
         [TestMethod, TestCategory("Unit Test")]
         public void MethodInvocationDetails_DifferentInputValues_AreEqualIsFalse()
         {
-            var detail1 = new MethodIdentifier(
+            var detail1 = new MethodInvocation(
                 GetMethodInfo("SampleMethod", new[] { typeof(string) }),
                 new object[] { "input" });
-            var detail2 = new MethodIdentifier(
+            var detail2 = new MethodInvocation(
                 GetMethodInfo("SampleMethod", new[] { typeof(string) }),
                 new object[] { "input2" });
 
@@ -51,10 +51,10 @@ namespace CachingDynamicDecorator.UnitTests.Infrastructure
         [TestMethod, TestCategory("Unit Test")]
         public void MethodInvocationDetails_CompareIdenticalMethodInvocations_AreEqualIsTrue()
         {
-            var detail1 = new MethodIdentifier(
+            var detail1 = new MethodInvocation(
                 GetMethodInfo("SampleMethod", new[] { typeof(string) }),
                 new object[] { "input" });
-            var detail2 = new MethodIdentifier(
+            var detail2 = new MethodInvocation(
                 GetMethodInfo("SampleMethod", new[] { typeof(string) }),
                 new object[] { "input" });
 

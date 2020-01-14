@@ -20,8 +20,6 @@ namespace CachingDynamicDecorator.UnitTests
         private IMultipleParameterProvider _cachedMultiProvider;
         private FakeMultipleParameterProvider _fakeMultiProvider;
 
-        private DefaultCachingDecorator _dynamicDecorator;
-
         private readonly TimeSpan _cacheDuration = TimeSpan.FromMilliseconds(5);
         private readonly TimeSpan _expirationDuration = TimeSpan.FromMilliseconds(6);
 
@@ -35,25 +33,18 @@ namespace CachingDynamicDecorator.UnitTests
             _fakeAsyncProvider = new FakeAsyncProvider();
             _fakeReferenceObjectProvider = new FakeReferenceObjectProvider();
             _fakeMultiProvider = new FakeMultipleParameterProvider();
-            _dynamicDecorator = new DefaultCachingDecorator();
-            _cachedSimpleProvider = _dynamicDecorator.AddCaching<ISimpleProvider>(_fakeSimpleProvider, _cacheDuration);
-            _cachedAsyncProvider = _dynamicDecorator.AddCaching<IAsyncProvider>(_fakeAsyncProvider, _cacheDuration);
-            _cachedReferenceObjectProvider = _dynamicDecorator.AddCaching<IReferenceObjectProvider>(_fakeReferenceObjectProvider, _cacheDuration);
-            _cachedMultiProvider = _dynamicDecorator.AddCaching<IMultipleParameterProvider>(_fakeMultiProvider, _cacheDuration);
+            _cachedSimpleProvider = _fakeSimpleProvider.Cached<ISimpleProvider>(_cacheDuration);
+            _cachedAsyncProvider = _fakeAsyncProvider.Cached<IAsyncProvider>(_cacheDuration);
+            _cachedReferenceObjectProvider = _fakeReferenceObjectProvider.Cached<IReferenceObjectProvider>(_cacheDuration);
+            _cachedMultiProvider = _fakeMultiProvider.Cached<IMultipleParameterProvider>(_cacheDuration);
         }
 
         [TestMethod, TestCategory("Unit Test")]
         public void CachingDecorator_DecorateNullObject_ThrowsArgumentNullException()
         {
-            ExceptionAssert.Throws<ArgumentNullException>(() => _dynamicDecorator.AddCaching<ISimpleProvider>(null, _cacheDuration));
+            ExceptionAssert.Throws<ArgumentNullException>(() => ((FakeSimpleProvider)null).Cached<ISimpleProvider>(_cacheDuration));
         }
-
-        [TestMethod, TestCategory("Unit Test")]
-        public void CachingDecorator_DecorateObjectOfWrongType_ThrowsInvalidOperationException()
-        {
-            ExceptionAssert.Throws<InvalidOperationException>(() => _dynamicDecorator.AddCaching<ISimpleProvider>("invalidObjectType", _cacheDuration));
-        }
-
+        
         [TestMethod, TestCategory("Unit Test")]
         public void CachingDecorator_SingleCallToDecoratedMethod_MethodWasCalledWithCorrectParameter()
         {
